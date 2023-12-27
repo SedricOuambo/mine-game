@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mine aux cristaux</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <header>
+        <p class="titre">Mine aux cristaux</p>
+    </header>
+    <main>
+        <div class="cadreJeu">
+            <div class="enteteMine">
+                <div>
+                    <img src="./img/icone_pioche.png" class="pioche"></img>
+                </div>
+                <div id="progressBar" class="progressBar">
+                    <div class="progressBarGreen" id = 'progressBarGreen'>
+                    </div>
+                    <div class="progressBarGray">
+                    </div>
+                    <div class="energie" id='energie' > 40/40 </div>
+                </div>
+                <div>
+                    <input type="button" value="Quitter" id='quitter' class="quitter">
+                </div>
+                <div class="cristal">
+                    <div class="nombreCristaux" id='nombreCristaux'>0</div>
+                    <div>
+                        <img src="./img/icone_cristal.png" alt="cristal" class="imageCristal"></img>
+                    </div>
+                </div>    
+            </div>
+            <div class="grille" id="grille">
+            </div>
+            <div class="resultat" id = 'resultat'>
+                <span class="ganeOver"> Game Over</span>
+                <span class="cristaux" id = 'cristalResultat'> Cristaux : 0</span>
+                <input type="button" value="Nouvelle Partie" id='newPartie'>
+            </div>
+            <div>
+                <input class = "haut" type="button" value="Haut" id="haut">
+            </div>
+            <div>
+                    <input type="button" value="Gauche" id="gauche">
+                    <input type="button" value="Droite" id="droite">
+            </div>
+            <div><input type="button" value="Bas" id="bas"  class = "bas"></div>
+        </div>
+    </main>
+    <footer>
+        <p class = "Copy">Mine aux cristaux | &copy; Collège La Cité - Ottawa | Hiver 2023</p>
+        <p class = "name">Développé par Sedric Ouambo Silatchom </p>
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>

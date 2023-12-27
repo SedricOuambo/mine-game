@@ -1,0 +1,309 @@
+
+/*
+ Règle CSS de base et pour mobile
+*/
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+html {
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+}
+
+.progressBar, .progressBarGreen, .progressBarGray
+{
+    position: relative;
+    border: solid 1px black;
+    height: 2em;
+    width: 15em;
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.progressBarGreen
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    border-right: 0;
+    background-color: green;
+}
+
+.progressBarGray
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: gray;
+}
+
+.energie
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2em;
+    width: 15em;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    z-index: 3;
+    color: white;
+}
+
+
+.grille
+{
+    position: relative;
+    border: 30px solid rgb( 192 , 223 , 239);
+    border-style: inset;
+    border-radius: 10px;
+}
+
+.cadreJeu
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grille > div > div
+{
+    height: 2em;
+    width: 2em;
+}
+
+.enteteMine
+{
+    display: flex;
+    flex-direction: row;
+    align-items:start;
+    margin-top: 2em;
+    height: 2.3em;
+}
+
+.pioche
+{
+    width: 2em;
+    height: 2em;
+}
+
+.cristal
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: space-between;
+}
+
+.quitter
+{
+    border: solid 1px black;
+    height: 2em;
+    margin-bottom: 2em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: darkred;
+    color: white;
+    font-weight: bold;
+}
+
+.nombreCristaux
+{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.imageCristal
+{
+    width: 2em;
+    height: 2em;
+}
+
+.haut
+{
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+.bas
+{
+    margin-top: 0.5em;
+}
+
+.grille > div > img
+{
+    height: 0.9em;
+    width: .9em;
+    src: url('../img/tile_roche.png');
+}
+
+.resultat
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+    position: absolute;
+    background-color: white;
+    bottom: 50%;
+    left: 10em;
+    width: 13em;
+    height: 8em;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    z-index: -1;
+}
+
+header
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: rgb( 192 , 223 , 239);
+    align-items: center;
+    text-align: center;
+    color: darkgreen;
+}
+
+.titre
+{
+    padding: 0.5em;
+    font-size: 2em;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main
+{
+    margin-top: 2.3em;
+}
+
+
+footer
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgb( 192 , 223 , 239);
+    align-items: center;
+    text-align: center;
+    margin-top: 0.5em;
+    padding: 0.8em;
+    color: darkgreen;
+    font-weight: bold;
+}
+
+
+.Copy
+{
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+}
+
+.name
+{
+    padding-bottom: 0.5em;
+}
+
+
+/*
+ Règle à ajouter pour tablette électronique
+*/
+@media (min-width: 640px)
+{
+    .grille > div > img
+    {
+        height: 1.2em;
+        width: 1.2em;
+    }
+
+    .cristal
+    {
+        padding-left: 1em;
+    }
+
+    .resultat
+    {
+    bottom: 50%;
+    left: 17em;
+    }
+
+    .quitter
+    {
+        margin-left: 4em;
+        margin-right: 4em;
+        width: 5em;
+    }
+
+}
+
+/*
+ Règle à ajouter pour ordinateur
+*/
+@media (min-width: 1200px)
+{
+    .grille > div > img
+    {
+        height: 1.7em;
+        width: 1.7em;
+    }
+    .cristal
+    {
+        padding-left: 3em;
+    }
+
+    .quitter
+    {
+        margin-left: 10em;
+        margin-right: 8em;
+    }
+
+    .imageCristal
+    {
+    width: 2.5em;
+    height: 2.5em;
+    }
+
+    
+    .resultat
+    {
+    bottom: 10em;
+    left: 40em;
+    }
+    
+    /* footer
+    {
+        position: relative;
+    } */
+}
+
+
+
+
+
+
+
+
+
+
+
